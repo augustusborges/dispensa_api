@@ -3,9 +3,9 @@ var cors = require('cors')
 const produtoRoutes = require('./src/routes/produtoRoutes.js')
 
 const app = express()
-const port = 3000
+const port = 5000
 
-app.use(cors({origin:'http://localhost:13002'}));
+app.use(cors({origin:'http://localhost:3002'}));
 app.use(express.json());
 
 app.use(produtoRoutes);
