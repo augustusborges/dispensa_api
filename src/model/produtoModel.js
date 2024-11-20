@@ -22,7 +22,7 @@ async selecionaProduto(id){
 async atualizaProduto(produto){
   const resultado = await dbDispensa('produto')
   .where("id_produto", produto.id_produto)
-  .update({nome_produto: produto});
+  .update({nome_produto: produto.nome_produto, detalhe_produto: produto.detalhe_produto, valor_produto: produto.valor_produto});
    return resultado;
 }
 
